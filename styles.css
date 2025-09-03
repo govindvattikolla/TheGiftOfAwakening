@@ -227,8 +227,8 @@ header {
 
 /* === Hero Section === */
 .hero {
-    padding-top: 150px;
-    padding-bottom: 0px;
+    padding-top: 8rem !important;
+    padding-bottom: 0px !important;
     position: relative;
     overflow-y: hidden;
     background: #F8F4F1;  /* Soft Cream background */
@@ -244,10 +244,11 @@ header {
 
 .hero-content {
     flex: 1;
-    padding-right: 40px;
+    /* padding-right: 40px; */
     color: #4A4A4A;  /* Deep Charcoal Gray for text */
     overflow:hidden;
-    margin-left: 2rem;
+    margin-left: 4rem !important;
+    
     overflow: hidden;
 }
 
@@ -268,7 +269,7 @@ header {
 }
 
 .hero p {
-    font-size: 1.2rem;
+    font-size: 1.19rem !important;
     margin-bottom: 2.2rem;
     margin-left: 0.5rem;
     max-width: 600px;
@@ -1241,9 +1242,9 @@ animation: scroll 2s ease-in-out infinite;
 /* === About Section === */
 .about{
  
-  margin-bottom: 20px;
-  padding-bottom: 5% !important;
-  padding-top: 5%;
+  margin-bottom: 15px;
+  padding-bottom: 3% !important;
+  padding-top: 3% !important;
  overflow: hidden;
 }
 .about-container {
@@ -1321,6 +1322,9 @@ animation: scroll 2s ease-in-out infinite;
 
   .about-content {
     /* margin-right: 2rem; */
+    max-width: 50% !important;
+    margin-left: 1rem;
+   
   }
 
   .about-content h1 {
@@ -1404,7 +1408,7 @@ animation: scroll 2s ease-in-out infinite;
   }
 
   .about-image img {
-    width: 100%;
+    width: 100% !important;
     height: auto;
     margin-top: 0rem;
   }
@@ -1801,7 +1805,7 @@ width:80vw
   /* turning point section */
   .turning-point-section {
     background-color: #fdf6f9;
-    padding: 4rem 2rem;
+    padding: 3rem 2rem !important;
     display: flex;
     justify-content: center;
     margin-top: -40px;
@@ -1992,7 +1996,7 @@ width:80vw
   /* coaching invite section */
   .coaching-invite-section {
     background: linear-gradient(135deg, #fff8f2, #fce7ef);
-    padding: 4rem 2rem;
+    padding: 3rem 2rem !important;
     display: flex;
     justify-content: center;
     margin-top: -2rem;
@@ -2396,18 +2400,19 @@ width:80vw
   /* transform section */
   .transform-journey {
     background-color:  #fdf6f9;
-    padding: 60px 20px;
+    padding: 3rem 20px !important;
     font-family: 'Helvetica Neue', sans-serif;
     color: #372c35;
   
     /* border: 1px solid black; */
     border-radius: 5%;
+
   }
 
   .transform-journey .heading {
     text-align: center;
     max-width: 980px;
-    margin: 0 auto 40px;
+    margin: 0 auto 20px;
     overflow: visible !important;
     max-height: none;
   }
@@ -2429,6 +2434,12 @@ width:80vw
     line-height: 1.8;
     color: #4a4a4a;
   }
+  .transform-journey .ebook-btn{
+    text-align:center;
+    justify-content: center;
+    align-items: center;
+
+  }
 
   .transform-benefits {
     max-width: 900px;
@@ -2436,7 +2447,7 @@ width:80vw
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 40px 30px ;
-    padding-top: 20px;
+    padding-top: 0px;
    
   }
 
@@ -2733,6 +2744,7 @@ width:80vw
   
 }
 
+
 /* -------------------- */
 /* RESPONSIVE MEDIA QUERIES */
 /* -------------------- */
@@ -2878,7 +2890,7 @@ width:80vw
 /* FEEL GOOD SECTION */
 .feel-good-section {
   background: #fdf6f9;  /* soft pinkish background */
-  padding: 80px 20px;
+  padding: 3rem 20px !important;
   text-align: center;
   font-family: 'Segoe UI', sans-serif;
   color: #641b3b;
@@ -3547,7 +3559,7 @@ width:80vw
 
 .hero-intro {
   background: #fdf1f6;  /* soft blush tone */
-  padding: 80px 20px;
+  padding: 3rem 20px !important;
   text-align: center;
 }
 
@@ -3591,7 +3603,7 @@ width:80vw
   /* Pillars Section */
 .pillars {
   text-align: center;
-  padding: 80px 20px;
+  padding: 3rem 20px !important;
   background: #fdf9f6; /* light background */
 }
 
@@ -3617,7 +3629,7 @@ width:80vw
   background: #fff;
   border-radius: 15px;
   padding: 30px 25px;
-  width: 280px;
+  width: 300px;
   text-align: center;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
   transition: all 0.3s ease;
@@ -3626,14 +3638,14 @@ width:80vw
 }
 
 .pillar h3 {
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   margin-bottom: 12px;
   color: #9b4d73;
   font-weight: 600;
 }
 
 .pillar p {
-  font-size: 1rem;
+  font-size: 1.1rem;
   color: #555;
   line-height: 1.5;
 }
