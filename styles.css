@@ -170,7 +170,7 @@ header {
 
 
 .logo-text {
-    font-size: 26px;
+    font-size: 32px;
     font-weight: 650;
     color: #9c5283;
     /* margin-left: 30vw; */
@@ -266,7 +266,7 @@ header {
 }
 
 .hero-image img {
-    border-radius: 10px;
+    border-radius: 20px;
     width: 80%;
     height: auto;
     max-height: 100vh;
@@ -284,7 +284,8 @@ header {
     overflow:hidden
 }
 .hero-content h1{
-  overflow:block
+  overflow:block;
+  font-size: 1.8rem;
 }
 .hero-content .highlight{
   overflow: hidden;
@@ -883,6 +884,10 @@ animation: scroll 2s ease-in-out infinite;
   position: relative;
   overflow: hidden;
   cursor: pointer;
+  text-align: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
 }
 /* First 6 items - light lavender */
 .symptom-item:nth-child(-n+6) {
@@ -927,6 +932,8 @@ animation: scroll 2s ease-in-out infinite;
   justify-content: center;
   margin-bottom: 20px;
   transition: all 0.3s ease;
+
+  border: 0.5px solid red;
 }
 
 .symptom-item:hover .symptom-icon {
@@ -938,6 +945,7 @@ animation: scroll 2s ease-in-out infinite;
   width: 24px;
   height: 24px;
   fill: #9c5283;
+  display: block;
 }
 
 .symptom-name {
@@ -1274,14 +1282,14 @@ animation: scroll 2s ease-in-out infinite;
 }
 
 .about-image img {
-    border-radius: 10px;
+   
     max-height: 100vh;
     height:auto;
-    width:30vw !important;
+    width:35vw !important;
     margin-top: 0rem;
     overflow: hidden;
     margin-bottom: 0rem;
-    border-radius: 25px;
+    border-radius: 25px !important;
     /* margin-right: 2rem; */
   
     /* box-shadow: 20px 20px 60px rgba(0, 0, 0, 0.1); */
@@ -1290,6 +1298,8 @@ animation: scroll 2s ease-in-out infinite;
 
 .abt-guide{
   font-size: 20px;
+  
+  color:red
 }
 .about-content {
     flex: 1;
@@ -1488,6 +1498,16 @@ animation: scroll 2s ease-in-out infinite;
     text-align: center;
     font-size:1.2rem !important;
   } 
+}
+
+.life-container {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 50px;
+   margin-top: -1rem;
+    margin-bottom: -50px;
+    overflow: hidden;
 }
 
 /* === Resources Section === */
@@ -1758,9 +1778,9 @@ width:80vw
   }
   
   .cta-text {
-    font-weight: 500;
+    font-weight: 700 !important;
     color: #000000;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
   
   .call-button {
@@ -1839,71 +1859,143 @@ width:80vw
 
 
 
-  /* turning point section */
-  .turning-point-section {
-    background-color: #fdf6f9;
-    padding: 3rem 2rem !important;
-    display: flex;
-    justify-content: center;
-    margin-top: -40px;
-    overflow:hidden
-  }
-  
-  .turning-point-wrapper {
-    max-width: 750px;
+/* Main Section */
+.turning-point-section {
+  width: 100%;
+  background-color: #fdf6f9;
+  padding: 4rem 2rem;
+  box-sizing: border-box;
+}
+
+/* Inner Container */
+.turning-point-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+/* Text Content */
+.turning-point-content {
+  flex: 1 1 55%;
+  color: #3d3d3d;
+}
+
+.turning-point-content h2 {
+  font-size: 2.2rem;
+  color: #9c5283;
+  margin-bottom: 1rem;
+  font-style: italic;
+}
+
+.turning-point-content h3 {
+  font-size: 1.8rem;
+  color: #9c5283;
+  margin-bottom: 2rem;
+  font-weight: 600;
+}
+
+.turning-point-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.turning-point-list li {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  margin-bottom: 1.2rem;
+  padding-left: 1.6rem;
+  position: relative;
+}
+
+.turning-point-list li::before {
+  /* content: "👉"; */
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 1.2rem;
+  color: #f4a261;
+}
+
+/* Image */
+.turning-point-image {
+  flex: 1 1 40%;
+  max-width: 500px;
+}
+
+.turning-point-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+/*  Mobile & Tablet Styles
+======================== */
+@media (max-width: 1024px) {
+  .turning-point-container {
+    flex-direction: column;
+    align-items: center;
     text-align: left;
-    color: #3d3d3d;
-    overflow:hidden
+    gap: 2rem;
   }
-  
-  .turning-point-section blockquote {
-    font-size: 2.2rem;
-    color: #9c5283;
-    margin-bottom: 1rem;
-    margin-top: 0.5rem;
-    font-style: italic;
-   
+
+  .turning-point-content,
+  .turning-point-image {
+    flex: 1 1 100%;
+    max-width: 100%;
+    width: 100%;
   }
-  
-  .turning-point-section h3 {
+
+  .turning-point-content h2 {
     font-size: 1.8rem;
-    color: #9c5283;
-    margin-bottom: 1.5rem;
-    font-weight: 600;
+    text-align: center;
   }
-  
+
+  .turning-point-content h3 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
   .turning-point-list {
-    list-style: none;
-    padding: 0;
-    /* margin: 0 0 1rem; */
-    /* margin-left: -0.5rem; */
-    margin-bottom: -1rem;
-    
+    padding: 0 1rem;
   }
-  
+
   .turning-point-list li {
-    font-size: 1.2rem;
-    line-height: 1.7;
-    margin-bottom: 1rem;
-    position: relative;
-    padding-left: 2rem;
-    text-indent: -2rem;
+    font-size: 1rem;
+    line-height: 1.6;
   }
-  
-  .turning-point-list li::before {
-    /* content: "👉"; */
-    position: absolute;
-    left: 0;
-    top: 0;
-    line-height: 1.7;
+
+  .turning-point-image img {
+    max-width: 100%;
+    height: auto;
   }
-  
-  .highlight-text {
-    margin-top: 2rem;
+}
+
+@media (max-width: 600px) {
+  .turning-point-content h2 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .turning-point-content h3 {
     font-size: 1.3rem;
-    font-weight: bold;
-    color: #9c5283;
   }
+
+  .turning-point-list li {
+    font-size: 0.95rem;
+  }
+
+  .turning-point-section {
+    padding: 3rem 1rem;
+  }
+}
+
   
   /* 🔥 Media Queries */
   @media screen and (min-width: 1440px) {
@@ -1941,84 +2033,6 @@ width:80vw
   }
 }
 
-@media (max-width: 1080px) {
-  .turning-point-section {
-    padding: 3rem 1.5rem;
-    margin-top: -60px;
-  }
-
-  .turning-point-wrapper {
-    padding: 0 10px;
-  }
-
-  .turning-point-section blockquote {
-    font-size: 1.8rem;
-  }
-
-  .turning-point-section h3 {
-    font-size: 1.6rem;
-  }
-
-  .turning-point-list li {
-    font-size: 1.1rem;
-    padding-left: 1.8rem;
-    text-indent: -1.1rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .turning-point-section {
-    padding: 2rem 2rem;
-    margin-top: 0px;
-    border: 0.1px solid lightcoral;
-  }
-
-  .turning-point-section blockquote {
-    font-size: 1.4rem;
-  }
-
-  .turning-point-section h3 {
-    font-size: 1.4rem;
-  }
-
-  .turning-point-list li {
-    font-size: 1rem;
-    padding-left: 1.6rem;
-    text-indent: -1rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .turning-point-section {
-    padding: 2rem 2rem;
-    margin-top: -30px;
-    
-  }
-
-  .turning-point-section blockquote {
-    font-size: 1.15rem;
-  }
-  .turning-point-section .btn{
-    margin-left:2rem
-  }
-
-  .turning-point-section h3 {
-    font-size: 1.2rem;
-   
-  }
-  .turning-point-section p{
-    font-size: 1rem;
-  }
-
-  .turning-point-list li {
-    font-size: 1rem;
-    padding-left: 1.5rem;
-    text-indent: -1.5rem;
-    margin-left: 10px;
-  }
-  .turning-point-section .highlight-text{
-    font-size:0.9rem;
-  }
 
   .highlight-text {
     font-size: 1.1rem;
@@ -2026,7 +2040,6 @@ width:80vw
     margin-bottom: 0.4rem;
     
   }
-}
   
 
   
@@ -2060,12 +2073,19 @@ width:80vw
   
   .coaching-invite-wrapper p {
     font-size: 1.2rem;
-    line-height: 1.4;
+    line-height: 1.1;
     margin-bottom: 1.2rem;
   }
   
   .coaching-invite-wrapper strong {
     color: #9c5283;
+  }
+  .pg-tittle{
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: black !important;
+    padding: 5px 5px;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
   }
   
   .cta-box {
@@ -2096,8 +2116,9 @@ width:80vw
   
   .cta-subtext {
     margin-top: 0.8rem;
-    font-size: 1rem;
-    color: #383838;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #000000;
     margin-left:1rem
   }
   
@@ -2218,6 +2239,8 @@ width:80vw
     background-color: #fff8f2;
     gap: 40px;
     margin-top: -2rem;
+    /* max-width: 100%; */
+    
    
   }
   
@@ -2227,7 +2250,7 @@ width:80vw
   }
   
   .program-content h2 {
-    font-size:2rem !important;
+    font-size:1.75rem !important;
     margin-bottom: 15px;
     color: #000000;
     text-align: left;
@@ -2424,6 +2447,7 @@ width:80vw
 
   .program-content p {
     font-size: 0.95rem;
+    text-align: center;
     
   }
 
@@ -3291,9 +3315,10 @@ width:80vw
 
 .awakening-title {
   font-size: 2.5rem;
-  color: #9c5283;
+  color: #000000;
   font-weight: 700;
   margin-bottom: 15px;
+  margin-top: 10px;
 }
 
 .awakening-subtext {
@@ -3385,7 +3410,8 @@ width:80vw
 .awakening-footer {
   margin-top: 25px;
   color: #333;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
+  font-weight: 600;
 }
 
 .awakening-beautiful {
