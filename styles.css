@@ -405,68 +405,51 @@ animation: scroll 2s ease-in-out infinite;
     opacity: 0;
 }
 }
-/* for large screens */
-@media screen and (min-width: 1440px) {
-  .hero {
-    padding-top: 160px;
-    padding-bottom: 40px;
-    background-color: #F8F4F1;
+
+/* for ultra LS */
+@media screen and (min-width: 1920px) {
+  .hero-content h1 {
+    font-size: 2.3rem;
   }
 
+  .hero-image img {
+    width: 60%;
+  }
+}
+
+/* === MacBook Pro / Large Screen Fixes === */
+@media screen and (min-width: 1440px) and (max-width: 1680px) {
   .hero-container {
-    max-width: 1350px;
-    margin: 0 auto;
-    padding: 0 2rem;
-    justify-content: space-between;
-    overflow: visible;
+    align-items: center;
+    gap: 2rem;
+    padding-left: 4vw;
+    padding-right: 4vw;
   }
 
   .hero-content {
-    padding-right: 60px;
-    margin-left: 3rem;
+    margin-left: 4em !important;
+    font-size: 1.2rem;
   }
 
   .hero-content h1 {
-    font-size: 2.8rem;
-    line-height: 3.2rem;
-  }
-
-  .hero p {
-    font-size: 1.4rem;
-    margin-bottom: 2.5rem;
-    margin-left: 0;
+    font-size: 2rem;
+    line-height: 2.5rem;
   }
 
   .hero-image img {
     width: 70%;
-    margin-left: 5vw;
-    max-width: 600px;
-    margin-top: -10px;
-    
+    max-height: 80vh;
+    margin-left: 2vw;
+    margin-top: 0;
+    object-fit: contain;
   }
 
-  /* Floating shapes can scale slightly */
-  .shape1,
-  .shape2,
-  .shape3,
-  .shape4 {
-    transform: scale(1.1);
-    opacity: 0.9;
-  }
-
-  /* Scroll down indicator */
-  .scroll-down span {
-    font-size: 16px;
-  }
-
-  .mouse {
-    width: 30px;
-    height: 50px;
-  }
-
-  .wheel {
-    width: 6px;
-    height: 12px;
+  .hero {
+    padding-top: 6rem !important;
+    padding-bottom: 4rem !important;
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
   }
 }
 
@@ -1285,7 +1268,7 @@ animation: scroll 2s ease-in-out infinite;
    
     max-height: 100vh;
     height:auto;
-    width:35vw !important;
+    width:30vw !important;
     margin-top: 0rem;
     overflow: hidden;
     margin-bottom: 0rem;
