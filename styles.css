@@ -129,24 +129,6 @@ img {
   
 }
 
-/* .highlight:after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 8px;
-    bottom: 5px;
-    left: 0;
-    background-color: rgba(156, 82, 131, 0.2);
-    z-index: -1;
-    border-radius: 10px;
-} */
-
-
-
-
-
-
-
 
 /* === Header Styles === */
 header {
@@ -165,8 +147,6 @@ header {
     justify-content: center;
     align-items: center;
 }
-
-
 
 
 .logo-text {
@@ -234,8 +214,8 @@ header {
 
 /* === Hero Section === */
 .hero {
-    padding-top: 8rem !important;
-    padding-bottom: 0px !important;
+    padding-top: 12rem !important;
+    padding-bottom: 8px !important;
     position: relative;
     overflow-y: hidden;
     background: #F8F4F1;  /* Soft Cream background */
@@ -246,7 +226,8 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    overflow:hidden
+    overflow:hidden;
+    max-width: 1300px !important;
 }
 
 .hero-content {
@@ -271,7 +252,7 @@ header {
     height: auto;
     max-height: 100vh;
     margin-left: 5vw;
-    margin-top: -23px;
+    margin-top: 2rem;
     overflow: hidden;
 }
 
@@ -524,23 +505,22 @@ animation: scroll 2s ease-in-out infinite;
 }
 
 /* ================================
-   Tablet View (max-width: 768px)
-   ================================ */
-/* ================================
    Tablet & Mobile View (max-width: 768px)
    ================================ */
 @media screen and (max-width: 768px) {
   body {
     overflow-x: hidden;
+    margin: 0;
+    padding: 0;
   }
-  
 
   .hero {
-    padding-top: 100px;
+    padding-top: 10px;
     padding-bottom: 2rem;
     width: 100%;
     max-width: 100vw;
-    overflow-x: hidden;
+    overflow: hidden;
+    position: relative;
   }
 
   .hero-container {
@@ -550,14 +530,15 @@ animation: scroll 2s ease-in-out infinite;
     padding: 0 1rem;
     max-width: 100%;
     box-sizing: border-box;
-    overflow-x: hidden;
+    overflow: hidden;
   }
 
   .hero-content {
     padding: 0;
-    margin-left: 0px !important;
+    margin-left: 0 !important;
     width: 100%;
     box-sizing: border-box;
+    overflow: hidden;
   }
 
   .hero-content h1 {
@@ -565,6 +546,7 @@ animation: scroll 2s ease-in-out infinite;
     line-height: 2.2rem;
     margin-bottom: 1rem;
     word-wrap: break-word;
+    overflow-wrap: break-word;
   }
 
   .hero p {
@@ -574,25 +556,31 @@ animation: scroll 2s ease-in-out infinite;
     max-width: 100%;
     padding: 0 0.5rem;
     word-wrap: break-word;
+    overflow-wrap: break-word;
   }
 
-  /* Hide the hero image on mobile */
   .hero-image {
-    display: none;
+    display: none !important;
+    width: 0;
+    height: 0;
+    overflow: hidden;
   }
 
-  /* Hide floating shapes on mobile */
   .floating-shape,
   .shape1,
   .shape2,
   .shape3,
   .shape4 {
     display: none !important;
+    width: 0 !important;
+    height: 0 !important;
+    overflow: hidden;
+    visibility: hidden;
   }
 
-  /* Scroll-down indicator repositioned or hidden */
   .scroll-down {
     bottom: 10px;
+    position: relative;
   }
 
   .scroll-down span {
@@ -610,23 +598,30 @@ animation: scroll 2s ease-in-out infinite;
   }
 }
 
+
 /* ================================
    Mobile View (max-width: 480px)
    ================================ */
 @media screen and (max-width: 480px) {
-  .hero{
-    overflow-y: hidden;
+  .hero {
+    overflow: hidden !important;
+    padding-bottom: 2rem;
+    overflow-y: auto;
   }
+
   .hero-content h1 {
-    font-size: 1.9rem;
+    font-size: 1.8rem;
     line-height: 2.6rem;
     margin-bottom: 2rem !important;
     word-wrap: break-word;
+    overflow-wrap: break-word;
+    overflow-y:auto
   }
 
   .hero p {
     font-size: 1.2rem;
     word-wrap: break-word;
+    overflow-wrap: break-word;
   }
 
   .scroll-down {
@@ -690,44 +685,67 @@ animation: scroll 2s ease-in-out infinite;
 .features h3{
   text-align:center
 }
-/* media queries */
-@media screen and (min-width: 1440px) {
-  .features {
-    padding-top: 6rem;
-    padding-left: 4rem;
-    padding-right: 4rem;
-  }
 
-  .features h2 {
-    font-size: 2.8rem;
-    margin-bottom: 3rem;
+/* === Ultra-Wide Screens (1920px and above) === */
+@media screen and (min-width: 1920px) {
+  .features {
+    padding-top: 7rem;
+    padding-left: 10rem;
+    padding-right: 10rem;
   }
 
   .features-grid {
-    max-width: 1350px;
-    margin: 0 auto;
+    gap: 50px;
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  .feature-card {
+    padding: 50px;
+  }
+
+  .features h2 {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 3.5rem;
+  }
+
+  .features h3 {
+    font-size: 1.4rem;
+  }
+}
+
+/* === MacBook Pro / Large Screen Fixes === */
+@media screen and (min-width: 1440px) and (max-width: 1680px) {
+  .features {
+    padding-top: 6rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+
+  .features-grid {
     gap: 40px;
+    grid-template-columns: repeat(3, 1fr);
   }
 
   .feature-card {
     padding: 40px;
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
   }
 
-  .feature-icon {
-    width: 70px;
-    height: 70px;
-  }
-
-  .feature-icon i {
-    font-size: 28px;
+  .features h2 {
+    font-size: 2.8rem;
+    text-align: center;
+    margin-bottom: 3rem;
   }
 
   .features h3 {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
 }
+
+
+
+/* media queries */
+
 
 @media (max-width: 1080px) {
   .features-grid {
@@ -1025,11 +1043,105 @@ animation: scroll 2s ease-in-out infinite;
 
 /* media queries */
 
-@media (min-width: 1440px) {
+/* === MacBook Pro / Large Screen Fixes === */
+@media screen and (min-width: 1440px) and (max-width: 1680px) {
+  .symptoms-checker {
+    padding: 80px 60px 40px;
+    max-width: 1280px;
+  }
+
+  .symptoms-title {
+    font-size: 2.5rem;
+  }
+
+  .symptoms-subtitle {
+    font-size: 1.25rem;
+  }
+
+  .symptoms-list {
+    gap: 30px;
+  }
+
+  .symptom-item {
+    padding: 35px;
+  }
+
   .symptom-name {
+    font-size: 1.3rem !important;
+  }
+
+  .symptom-description {
     font-size: 1rem;
   }
+
+  .action-container {
+    padding: 50px;
+  }
+
+  .action-title {
+    font-size: 2rem;
+  }
+
+  .action-subtitle {
+    font-size: 1.2rem;
+  }
+
+  .action-button {
+    font-size: 1.15rem;
+    padding: 18px 45px;
+  }
 }
+
+
+/* === Ultra-Wide Screens (1920px and above) === */
+@media screen and (min-width: 1920px) {
+  .symptoms-checker {
+    padding: 120px 100px 60px;
+    max-width: 1400px;
+  }
+
+  .symptoms-title {
+    font-size: 2.8rem;
+  }
+
+  .symptoms-subtitle {
+    font-size: 1.3rem;
+  }
+
+  .symptoms-list {
+    gap: 40px;
+  }
+
+  .symptom-item {
+    padding: 40px;
+  }
+
+  .symptom-name {
+    font-size: 1.4rem !important;
+  }
+
+  .symptom-description {
+    font-size: 1.05rem;
+  }
+
+  .action-container {
+    padding: 60px;
+  }
+
+  .action-title {
+    font-size: 2.2rem;
+  }
+
+  .action-subtitle {
+    font-size: 1.3rem;
+  }
+
+  .action-button {
+    font-size: 1.2rem;
+    padding: 20px 50px;
+  }
+}
+
 
 @media (max-width: 1080px) {
   .symptoms-checker {
@@ -1103,7 +1215,7 @@ animation: scroll 2s ease-in-out infinite;
     
     .symptoms-title{
       padding-bottom: 70px;
-      font-size: 1.5rem;
+      font-size: 1.2rem;
     }
   
   .symptoms-list {
@@ -1124,7 +1236,7 @@ animation: scroll 2s ease-in-out infinite;
 
   .symptom-name{
     text-align: center;
-    font-size: 1rem !important;
+    font-size: 0.8rem !important;
     
   }
 
@@ -1307,87 +1419,83 @@ animation: scroll 2s ease-in-out infinite;
 
 
 /* media queries for xl screens */
-@media screen and (min-width: 1440px) {
+/* === MacBook Pro / Large Screen Fixes === */
+@media screen and (min-width: 1440px) and (max-width: 1680px) {
   .about {
-    padding-top: 6%;
-    padding-bottom: 6%;
+    padding-top: 4%;
+    padding-bottom: 4%;
+    margin-bottom: 25px;
   }
 
   .about-container {
-    max-width: 1350px;
-    margin: 0 auto;
-    gap: 70px;
-    align-items: center;
-    padding: 0 3rem;
+    gap: 60px;
+    margin-top: -1rem;
+    margin-bottom: -30px;
+  }
+
+  .about-image img {
+    width: 28vw !important;
   }
 
   .about-content {
-    /* margin-right: 2rem; */
-    max-width: 50% !important;
-    margin-left: 1rem;
-   
+    margin-right: 2rem;
   }
-  .about-heading {
-  display: flex;
-  align-items: baseline;
-  gap: 1rem;
-  flex-wrap: nowrap;
-  margin-bottom: 1.5rem;
-}
-
-.about-heading h1 {
-  font-size: 2.8rem;
-  line-height: 3.4rem;
-  margin: 0;
-  padding: 0;
-}
-
-.about-heading .abt-guide {
-  font-size: 1.3rem;
-  font-weight: 400;
-  margin: 0;
-  padding: 0;
-  white-space: nowrap;
-  color: #555; /* optional styling */
-}
-
 
   .about-content h1 {
     font-size: 2.4rem;
-    line-height: 3.4rem;
-    margin-bottom: 1rem;
+  }
+
+  .about-content p {
+    font-size: 1.2rem;
+  }
+
+  .abt-guide {
+    font-size: 21px;
+  }
+
+  .about-content h4 {
+    font-size: 1.3rem;
+  }
+}
+
+/* === Ultra-Wide Screens (1920px and above) === */
+@media screen and (min-width: 1920px) {
+  .about {
+    padding-top: 5%;
+    padding-bottom: 5%;
+    margin-bottom: 30px;
+  }
+
+  .about-container {
+    gap: 80px;
+    margin-bottom: -10px;
+  }
+
+  .about-image img {
+    width: 25vw !important;
+  }
+
+  .about-content {
+    margin-right: 3rem;
+  }
+
+  .about-content h1 {
+    font-size: 2.4rem;
   }
 
   .about-content p {
     font-size: 1.3rem;
-    line-height: 1.9rem;
   }
 
   .abt-guide {
-    font-size: 1.2rem;
+    font-size: 22px;
   }
 
   .about-content h4 {
-    font-size: 1.2rem;
-    margin-top: -35px;
-    margin-bottom: 30px;
-  }
-
-  .about-image {
-    flex: 1;
-    text-align: center;
-    border-radius: 25px;
-  }
-
-  .about-image img {
-    max-width: 600px;
-    width: 90%;
-    margin-top: -3rem;
-    margin-bottom: -1rem;
-    border-radius: 12px !important;
-    
+    font-size: 1.4rem;
   }
 }
+
 
 /* For screens up to 1080px */
 @media (max-width: 1080px) {
@@ -1433,27 +1541,27 @@ animation: scroll 2s ease-in-out infinite;
   }
 
   .about-image img {
-    width: 100% !important;
+    width: 80% !important;
     height: auto;
-    margin-top: 0rem;
+    margin-top: 0.5rem;
   }
 
   .about-content {
     margin: 0;
     padding: 0 15px;
-    text-align: left;
+    text-align: center;
   }
 
   .about-content h4 {
     font-size: 1.2rem;
     margin-top: -20px;
     margin-bottom: 20px;
-    text-align: left;
+    text-align: center;
   }
 
   .about-content p {
     font-size: 0.95rem;
-    text-align: left;
+    text-align: center;
   }
   .about-content h1{
     text-align: center;
@@ -1463,11 +1571,11 @@ animation: scroll 2s ease-in-out infinite;
     font-size: 1rem;
   }
   .about-content h3{
-    text-align: left;
+    text-align: center;
   }
   .about-content .call-button{
    /* margin-left: -70px; */
-   text-align: left;
+   text-align: center;
   }
   .about .cta-subtext{
     text-align:center;
@@ -1822,21 +1930,24 @@ width:80vw
   }
 
   .life-shift-section h1 {
-    font-size: 1.6rem;
+    font-size: 1.2rem;
   }
 
   .life-shift-section h2 {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
   }
 
   .life-shift-section p {
-    font-size: 1.1rem;
+    font-size: 0.9rem;
     padding: 0 0.5rem;
   }
 
   .call-button {
     font-size: 0.95rem;
     padding: 0.65rem 1.2rem;
+  }
+  .cta-text{
+    font-size:0.9rem !important;
   }
 }
 
@@ -1869,10 +1980,11 @@ width:80vw
 }
 
 .turning-point-content h2 {
-  font-size: 2.2rem;
+  font-size: 2.1rem !important;
   color: #9c5283;
   margin-bottom: 1rem;
   font-style: italic;
+  text-align: left;
 }
 
 .turning-point-content h3 {
@@ -1916,6 +2028,69 @@ width:80vw
   height: auto;
   border-radius: 10px;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+
+/* === MacBook Pro / Large Screen Fixes === */
+@media screen and (min-width: 1440px) and (max-width: 1680px) {
+  .turning-point-section {
+    padding: 5rem 4rem;
+  }
+
+  .turning-point-container {
+    gap: 4rem;
+    flex-wrap: nowrap; /* Force side-by-side */
+  }
+
+  .turning-point-content {
+    flex: 1 1 55%;
+  }
+
+  .turning-point-content h2 {
+    font-size: 2.4rem;
+  }
+
+  .turning-point-content h3 {
+    font-size: 2rem;
+  }
+
+  .turning-point-list li {
+    font-size: 1.2rem;
+  }
+
+  .turning-point-image {
+    flex: 1 1 45%;
+    max-width: 480px;
+  }
+}
+
+/* === Ultra-Wide Screens (1920px and above) === */
+@media screen and (min-width: 1920px) {
+  .turning-point-section {
+    padding: 6rem 6rem;
+  }
+
+  .turning-point-container {
+    gap: 5rem;
+    flex-wrap: nowrap; /* Keep side-by-side */
+  }
+
+  .turning-point-content h2 {
+    font-size: 2.6rem;
+  }
+
+  .turning-point-content h3 {
+    font-size: 2.2rem;
+  }
+
+  .turning-point-list li {
+    font-size: 1.25rem;
+  }
+
+  .turning-point-image {
+    flex: 1 1 45%;
+    max-width: 520px;
+  }
 }
 
 /*  Mobile & Tablet Styles
@@ -1962,16 +2137,18 @@ width:80vw
 
 @media (max-width: 600px) {
   .turning-point-content h2 {
-    font-size: 1.5rem;
+    font-size: 1.3rem !important;
     text-align: center;
   }
 
   .turning-point-content h3 {
     font-size: 1.3rem;
+
   }
 
   .turning-point-list li {
     font-size: 0.95rem;
+    
   }
 
   .turning-point-section {
@@ -2222,8 +2399,6 @@ width:80vw
     background-color: #fff8f2;
     gap: 40px;
     margin-top: -2rem;
-    /* max-width: 100%; */
-    
    
   }
   
@@ -2285,6 +2460,88 @@ width:80vw
     border-radius: 25px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   }
+
+  /* === MacBook Pro / Large Screen Fixes === */
+@media screen and (min-width: 1440px) and (max-width: 1680px) {
+  .program-section {
+    padding: 80px 60px;
+    gap: 60px;
+    flex-wrap: nowrap; /* Force side-by-side layout */
+  }
+
+  .program-content {
+    flex: 1 1 55%;
+    max-width: none;
+  }
+
+  .program-content h2 {
+    font-size: 2rem !important;
+  }
+
+  .program-content h2 span {
+    font-size: 2.2rem !important;
+  }
+
+  .program-content p {
+    font-size: 1.2rem;
+  }
+
+  .program-button {
+    font-size: 1.15rem;
+    padding: 1rem 1.4rem;
+  }
+
+  .program-image {
+    flex: 1 1 45%;
+    max-width: 480px;
+  }
+
+  .program-image img {
+    width: 100%;
+  }
+}
+
+
+/* === Ultra-Wide Screens (1920px and above) === */
+@media screen and (min-width: 1920px) {
+  .program-section {
+    padding: 100px 100px;
+    gap: 80px;
+    flex-wrap: nowrap; /* Maintain side-by-side layout */
+  }
+
+  .program-content {
+    flex: 1 1 55%;
+    max-width: none;
+  }
+
+  .program-content h2 {
+    font-size: 2.3rem !important;
+  }
+
+  .program-content h2 span {
+    font-size: 2.5rem !important;
+  }
+
+  .program-content p {
+    font-size: 1.25rem;
+  }
+
+  .program-button {
+    font-size: 1.2rem;
+    padding: 1.1rem 1.6rem;
+  }
+
+  .program-image {
+    flex: 1 1 45%;
+    max-width: 520px;
+  }
+
+  .program-image img {
+    width: 100%;
+  }
+}
+
 /* for xl screens */
 @media screen and (min-width: 1440px) {
   .program-section {
@@ -2420,7 +2677,7 @@ width:80vw
     padding-bottom: 5%;
   }
   .program-content h2 {
-    font-size: 1.6rem;
+    font-size: 1.4rem ;
     text-align: center;
   }
 
@@ -2558,7 +2815,96 @@ width:80vw
     transform: scale(1.05);
   }
   
-  
+  /* === MacBook Pro / Large Screen Fixes === */
+@media screen and (min-width: 1440px) and (max-width: 1680px) {
+  .transform-journey {
+    padding: 4rem 60px !important;
+    border-radius: 40px;
+  }
+
+  .transform-journey .heading h2,
+  .transform-journey .heading h3 {
+    font-size: 2.1rem;
+  }
+
+  .transform-journey .heading p {
+    font-size: 1.2rem;
+    max-width: 850px;
+    margin: 0 auto;
+  }
+
+  .transform-benefits {
+    gap: 50px 40px;
+  }
+
+  .benefit {
+    padding: 15px;
+  }
+
+  .benefit-icon {
+    font-size: 1.8rem;
+  }
+
+  .benefit-content h4 {
+    font-size: 1.2rem;
+  }
+
+  .benefit-content p {
+    font-size: 1.05rem;
+  }
+
+  .cta-button {
+    font-size: 1.15rem;
+    padding: 16px 40px;
+  }
+}
+
+
+/* === Ultra-Wide Screens (1920px and above) === */
+@media screen and (min-width: 1920px) {
+  .transform-journey {
+    padding: 5rem 100px !important;
+    border-radius: 50px;
+  }
+
+  .transform-journey .heading h2,
+  .transform-journey .heading h3 {
+    font-size: 2.4rem;
+  }
+
+  .transform-journey .heading p {
+    font-size: 1.25rem;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .transform-benefits {
+    max-width: 1100px;
+    gap: 60px 50px;
+  }
+
+  .benefit {
+    padding: 20px;
+  }
+
+  .benefit-icon {
+    font-size: 2rem;
+  }
+
+  .benefit-content h4 {
+    font-size: 1.3rem;
+  }
+
+  .benefit-content p {
+    font-size: 1.1rem;
+  }
+
+  .cta-button {
+    font-size: 1.25rem;
+    padding: 18px 48px;
+  }
+}
+
   /* media queries */
   @media screen and (min-width: 1440px) {
   .transform-journey {
@@ -2640,7 +2986,7 @@ width:80vw
     padding: 10px 20px
   }
   .transform-journey .heading h2 {
-    font-size: 1.1rem;
+    font-size: 1.3rem !important;
   }
 
   .transform-journey .heading h3 {
@@ -2662,7 +3008,7 @@ width:80vw
   }
 
   .cta-button {
-    padding: 12px 28px;
+    padding: 12px 8px;
     font-size: 1rem;
   }
 }
@@ -3115,6 +3461,83 @@ width:80vw
   }
 }
 
+/* === MacBook Pro / Large Screen Fixes === */
+@media screen and (min-width: 1440px) and (max-width: 1680px) {
+  .how-it-works-section {
+    padding: 80px 60px;
+  }
+
+  .how-it-works-section h2 {
+    font-size: 2.6rem;
+    margin-bottom: 60px;
+  }
+
+  .steps-wrapper {
+    max-width: 900px;
+    padding-left: 60px;
+  }
+
+  .step-item {
+    margin-bottom: 50px;
+    padding-left: 40px;
+    margin-left: 5rem;
+  }
+
+  .step-item::before {
+    width: 36px;
+    height: 36px;
+    font-size: 1.05rem;
+    left: -45px;
+  }
+
+  .step-item h3 {
+    font-size: 1.5rem;
+  }
+
+  .step-item p {
+    font-size: 1.15rem;
+  }
+}
+
+
+/* === Ultra-Wide Screens (1920px and above) === */
+@media screen and (min-width: 1920px) {
+  .how-it-works-section {
+    padding: 100px 100px;
+  }
+
+  .how-it-works-section h2 {
+    font-size: 3rem;
+    margin-bottom: 70px;
+  }
+
+  .steps-wrapper {
+    max-width: 1000px;
+    padding-left: 80px;
+  }
+
+  .step-item {
+    margin-bottom: 60px;
+    padding-left: 50px;
+    margin-left: 6rem;
+  }
+
+  .step-item::before {
+    width: 42px;
+    height: 42px;
+    font-size: 1.1rem;
+    left: -50px;
+  }
+
+  .step-item h3 {
+    font-size: 1.7rem;
+  }
+
+  .step-item p {
+    font-size: 1.25rem;
+    line-height: 1.7;
+  }
+}
 
 /* For tablets and smaller laptops (max 1024px) */
 @media (max-width: 1024px) {
@@ -3450,6 +3873,134 @@ width:80vw
   font-weight: 600;
 }
 
+/* === MacBook Pro / Large Screen Fixes === */
+@media screen and (min-width: 1440px) and (max-width: 1680px) {
+  .awakening-section {
+    padding: 60px 40px;
+  }
+
+  .awakening-title {
+    font-size: 2.8rem;
+  }
+
+  .awakening-subtext,
+  .awakening-desc,
+  .awakening-note {
+    font-size: 1.25rem;
+  }
+
+  .awakening-highlight {
+    font-size: 1.8rem;
+  }
+
+  .awakening-subheading {
+    font-size: 1.4rem;
+    margin-right: 0;
+  }
+
+  .awakening-list li {
+    font-size: 1.2rem;
+  }
+
+  .awakening-quote {
+    font-size: 1.3rem;
+  }
+
+  .awakening-cta-title {
+    font-size: 1.7rem;
+  }
+
+  .awakening-btn {
+    font-size: 1.2rem;
+    padding: 16px 36px;
+  }
+
+  .awakening-footer {
+    font-size: 1.3rem;
+  }
+
+  .awakening-beautiful {
+    padding: 80px 60px;
+  }
+
+  .awakening-grid {
+    gap: 60px;
+  }
+
+  .awakening-card {
+    padding: 50px 35px;
+  }
+
+  .awakening-card h3 {
+    font-size: 1.8rem;
+  }
+}
+
+
+/* === Ultra-Wide Screens (1920px and above) === */
+@media screen and (min-width: 1920px) {
+  .awakening-section {
+    padding: 80px 80px;
+  }
+
+  .awakening-title {
+    font-size: 3rem;
+  }
+
+  .awakening-subtext,
+  .awakening-desc,
+  .awakening-note {
+    font-size: 1.3rem;
+  }
+
+  .awakening-highlight {
+    font-size: 2rem;
+  }
+
+  .awakening-subheading {
+    font-size: 1.5rem;
+    margin-right: 0;
+  }
+
+  .awakening-list li {
+    font-size: 1.25rem;
+  }
+
+  .awakening-quote {
+    font-size: 1.4rem;
+  }
+
+  .awakening-cta-title {
+    font-size: 1.8rem;
+  }
+
+  .awakening-btn {
+    font-size: 1.25rem;
+    padding: 18px 40px;
+  }
+
+  .awakening-footer {
+    font-size: 1.4rem;
+  }
+
+  .awakening-beautiful {
+    padding: 100px 100px;
+  }
+
+  .awakening-grid {
+    gap: 70px;
+  }
+
+  .awakening-card {
+    padding: 60px 40px;
+  }
+
+  .awakening-card h3 {
+    font-size: 2rem;
+  }
+}
+
+
 /* Responsive Styles for Mobile */
 @media (max-width: 768px) {
   .awakening-beautiful {
@@ -3713,6 +4264,69 @@ width:80vw
   opacity: 1;
   transform: translateY(0);
   transition: all 0.6s ease-out;
+}
+
+/* === MacBook Pro / Large Screen Fixes === */
+@media screen and (min-width: 1440px) and (max-width: 1680px) {
+  .pillars {
+    padding: 4rem 60px !important;
+  }
+
+  .pillars h2 {
+    font-size: 2.2rem;
+    margin-bottom: 60px;
+  }
+
+  .pillar-list {
+    gap: 40px;
+    max-width: 1100px;
+  }
+
+  .pillar {
+    width: 320px;
+    padding: 35px 30px;
+  }
+
+  .pillar h3 {
+    font-size: 1.6rem;
+  }
+
+  .pillar p {
+    font-size: 1.15rem;
+    line-height: 1.6;
+  }
+}
+
+
+/* === Ultra-Wide Screens (1920px and above) === */
+@media screen and (min-width: 1920px) {
+  .pillars {
+    padding: 5rem 100px !important;
+  }
+
+  .pillars h2 {
+    font-size: 3rem;
+    margin-bottom: 70px;
+  }
+
+  .pillar-list {
+    gap: 50px;
+    max-width: 1200px;
+  }
+
+  .pillar {
+    width: 340px;
+    padding: 40px 35px;
+  }
+
+  .pillar h3 {
+    font-size: 1.75rem;
+  }
+
+  .pillar p {
+    font-size: 1.2rem;
+    line-height: 1.7;
+  }
 }
 
 /* Responsive */
