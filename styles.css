@@ -704,7 +704,7 @@ animation: scroll 2s ease-in-out infinite;
   }
 
   .features h2 {
-    font-size: 3rem;
+    font-size: 2.5rem;
     text-align: center;
     margin-bottom: 3.5rem;
   }
@@ -3013,46 +3013,7 @@ width:80vw
   }
 }
 
-/* Mobile (max-width: 425px) */
-/* @media (max-width: 425px) {
-  .transform-journey {
-    padding: 40px 15px;
-    border-radius: 4%;
-  }
 
-  .transform-journey .heading h2 {
-    font-size: 1.2rem;
-  }
-
-  .transform-journey .heading h3 {
-    font-size: 1.3rem;
-  }
-
-  .transform-journey .heading p {
-    font-size: 0.95rem;
-    line-height: 1.6;
-    text-align:left;
-  }
-
-  .benefit-content h4 {
-    font-size: 1rem;
-  }
-
-  .benefit-content p {
-    font-size: 0.9rem;
-  }
-
-  .benefit-icon {
-    font-size: 1.3rem;
-  }
-
-  .cta-button {
-    font-size: 0.95rem;
-    padding: 10px 24px;
-  }
-} */
-
-  /* pillars section */
   
 /* pillars section */
 .pillars-section {
@@ -4359,6 +4320,33 @@ width:80vw
   .pillar {
     width: 100%;
     max-width: 100%;
+  }
+}
+
+/* Newly Added */
+@media not all and (min-resolution:.001dpcm) {
+  @supports (-webkit-appearance:none) {
+    /* Safari-specific fixes go here */
+
+    .about-container {
+      align-items: stretch;
+    }
+
+    .about-content {
+      padding-top: 0.5rem;
+    }
+  }
+}
+
+@media not all and (min-resolution: 0.001dpcm) {
+  @supports (-webkit-appearance: none) {
+    .coaching-invite-wrapper {
+      padding-top: 2.5rem;
+    }
+
+    .btn.btn-primary {
+      font-size: 1.05rem;
+    }
   }
 }
 
