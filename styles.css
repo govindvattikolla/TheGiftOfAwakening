@@ -214,8 +214,8 @@ header {
 
 /* === Hero Section === */
 .hero {
-    padding-top: 12rem !important;
-    padding-bottom: 8px !important;
+    padding-top: 2rem !important;
+    padding-bottom: 1rem !important;
     position: relative;
     overflow-y: hidden;
     background: #F8F4F1;  /* Soft Cream background */
@@ -232,7 +232,7 @@ header {
 
 .hero-content {
     flex: 1;
-    /* padding-right: 40px; */
+    padding-top: 6rem;
     color: #4A4A4A;  /* Deep Charcoal Gray for text */
     overflow:hidden;
     margin-left: 7em !important;
@@ -248,16 +248,17 @@ header {
 
 .hero-image img {
     border-radius: 20px;
-    width: 80%;
+    width: 78%;
     height: auto;
-    max-height: 100vh;
+    max-height: 92vh;
     margin-left: 5vw;
     margin-top: 2rem;
     overflow: hidden;
+    padding-top: 3rem;
 }
 
 .hero p {
-    font-size: 1.19rem !important;
+    font-size: 1.2rem !important;
     margin-bottom: 2.2rem;
     margin-left: 0.5rem;
     max-width: 600px;
@@ -266,7 +267,7 @@ header {
 }
 .hero-content h1{
   overflow:block;
-  font-size: 1.8rem;
+  font-size: 2.2rem;
 }
 .hero-content .highlight{
   overflow: hidden;
@@ -387,52 +388,7 @@ animation: scroll 2s ease-in-out infinite;
 }
 }
 
-/* for ultra LS */
-@media screen and (min-width: 1920px) {
-  .hero-content h1 {
-    font-size: 2.3rem;
-  }
 
-  .hero-image img {
-    width: 60%;
-  }
-}
-
-/* === MacBook Pro / Large Screen Fixes === */
-@media screen and (min-width: 1440px) and (max-width: 1680px) {
-  .hero-container {
-    align-items: center;
-    gap: 2rem;
-    padding-left: 4vw;
-    padding-right: 4vw;
-  }
-
-  .hero-content {
-    margin-left: 4em !important;
-    font-size: 1.2rem;
-  }
-
-  .hero-content h1 {
-    font-size: 2rem;
-    line-height: 2.5rem;
-  }
-
-  .hero-image img {
-    width: 70%;
-    max-height: 80vh;
-    margin-left: 2vw;
-    margin-top: 0;
-    object-fit: contain;
-  }
-
-  .hero {
-    padding-top: 6rem !important;
-    padding-bottom: 4rem !important;
-    min-height: 90vh;
-    display: flex;
-    align-items: center;
-  }
-}
 
 /* media queries */
 @media (max-width: 1080px) {
@@ -684,62 +640,6 @@ animation: scroll 2s ease-in-out infinite;
 
 .features h3{
   text-align:center
-}
-
-/* === Ultra-Wide Screens (1920px and above) === */
-@media screen and (min-width: 1920px) {
-  .features {
-    padding-top: 7rem;
-    padding-left: 10rem;
-    padding-right: 10rem;
-  }
-
-  .features-grid {
-    gap: 50px;
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  .feature-card {
-    padding: 50px;
-  }
-
-  .features h2 {
-    font-size: 2.5rem;
-    text-align: center;
-    margin-bottom: 3.5rem;
-  }
-
-  .features h3 {
-    font-size: 1.4rem;
-  }
-}
-
-/* === MacBook Pro / Large Screen Fixes === */
-@media screen and (min-width: 1440px) and (max-width: 1680px) {
-  .features {
-    padding-top: 6rem;
-    padding-left: 5rem;
-    padding-right: 5rem;
-  }
-
-  .features-grid {
-    gap: 40px;
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  .feature-card {
-    padding: 40px;
-  }
-
-  .features h2 {
-    font-size: 2.8rem;
-    text-align: center;
-    margin-bottom: 3rem;
-  }
-
-  .features h3 {
-    font-size: 1.3rem;
-  }
 }
 
 
@@ -1043,104 +943,7 @@ animation: scroll 2s ease-in-out infinite;
 
 /* media queries */
 
-/* === MacBook Pro / Large Screen Fixes === */
-@media screen and (min-width: 1440px) and (max-width: 1680px) {
-  .symptoms-checker {
-    padding: 80px 60px 40px;
-    max-width: 1280px;
-  }
 
-  .symptoms-title {
-    font-size: 2.5rem;
-  }
-
-  .symptoms-subtitle {
-    font-size: 1.25rem;
-  }
-
-  .symptoms-list {
-    gap: 30px;
-  }
-
-  .symptom-item {
-    padding: 35px;
-  }
-
-  .symptom-name {
-    font-size: 1.3rem !important;
-  }
-
-  .symptom-description {
-    font-size: 1rem;
-  }
-
-  .action-container {
-    padding: 50px;
-  }
-
-  .action-title {
-    font-size: 2rem;
-  }
-
-  .action-subtitle {
-    font-size: 1.2rem;
-  }
-
-  .action-button {
-    font-size: 1.15rem;
-    padding: 18px 45px;
-  }
-}
-
-
-/* === Ultra-Wide Screens (1920px and above) === */
-@media screen and (min-width: 1920px) {
-  .symptoms-checker {
-    padding: 120px 100px 60px;
-    max-width: 1400px;
-  }
-
-  .symptoms-title {
-    font-size: 2.8rem;
-  }
-
-  .symptoms-subtitle {
-    font-size: 1.3rem;
-  }
-
-  .symptoms-list {
-    gap: 40px;
-  }
-
-  .symptom-item {
-    padding: 40px;
-  }
-
-  .symptom-name {
-    font-size: 1.4rem !important;
-  }
-
-  .symptom-description {
-    font-size: 1.05rem;
-  }
-
-  .action-container {
-    padding: 60px;
-  }
-
-  .action-title {
-    font-size: 2.2rem;
-  }
-
-  .action-subtitle {
-    font-size: 1.3rem;
-  }
-
-  .action-button {
-    font-size: 1.2rem;
-    padding: 20px 50px;
-  }
-}
 
 
 @media (max-width: 1080px) {
@@ -1365,11 +1168,8 @@ animation: scroll 2s ease-in-out infinite;
    margin-top: -1rem;
     margin-bottom: -50px;
     overflow: hidden;
+    padding-bottom: 1rem;
 }
-.about-coontent h1{
-  overflow:hidden
-}
-
 .about-image {
     flex: 1;
     overflow: hidden;
@@ -1378,9 +1178,9 @@ animation: scroll 2s ease-in-out infinite;
 
 .about-image img {
    
-    max-height: 100vh;
+    max-height: 95vh;
     height:auto;
-    width:30vw !important;
+    width:32vw !important;
     margin-top: 0rem;
     overflow: hidden;
     margin-bottom: 0rem;
@@ -1398,13 +1198,14 @@ animation: scroll 2s ease-in-out infinite;
 }
 .about-content {
     flex: 1;
-    margin-right: 1rem;
+    margin-right: 0rem;
     text-align:left;
     overflow: hidden;
     
 }
 .about-content h1{
   overflow: hidden;
+  font-size: 2rem;
 }
 .about-content h4{
     text-align: center;
@@ -1413,87 +1214,8 @@ animation: scroll 2s ease-in-out infinite;
     border: 1px solid red;
 }
 .about-content p{
-    font-size: 1.1rem;
+    font-size: 1.08rem;
   
-}
-
-
-/* media queries for xl screens */
-/* === MacBook Pro / Large Screen Fixes === */
-@media screen and (min-width: 1440px) and (max-width: 1680px) {
-  .about {
-    padding-top: 4%;
-    padding-bottom: 4%;
-    margin-bottom: 25px;
-  }
-
-  .about-container {
-    gap: 60px;
-    margin-top: -1rem;
-    margin-bottom: -30px;
-  }
-
-  .about-image img {
-    width: 28vw !important;
-  }
-
-  .about-content {
-    margin-right: 2rem;
-  }
-
-  .about-content h1 {
-    font-size: 2.4rem;
-  }
-
-  .about-content p {
-    font-size: 1.2rem;
-  }
-
-  .abt-guide {
-    font-size: 21px;
-  }
-
-  .about-content h4 {
-    font-size: 1.3rem;
-  }
-}
-
-/* === Ultra-Wide Screens (1920px and above) === */
-@media screen and (min-width: 1920px) {
-  .about {
-    padding-top: 5%;
-    padding-bottom: 5%;
-    margin-bottom: 30px;
-  }
-
-  .about-container {
-    gap: 80px;
-    margin-bottom: -10px;
-  }
-
-  .about-image img {
-    width: 25vw !important;
-  }
-
-  .about-content {
-    margin-right: 3rem;
-  }
-
-  .about-content h1 {
-    font-size: 2.4rem;
-  }
-
-  .about-content p {
-    font-size: 1.3rem;
-  }
-
-  .abt-guide {
-    font-size: 22px;
-  }
-
-  .about-content h4 {
-    font-size: 1.4rem;
-  }
 }
 
 
@@ -1591,245 +1313,6 @@ animation: scroll 2s ease-in-out infinite;
   } 
 }
 
-.life-container {
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: center;
-    gap: 50px;
-   margin-top: -1rem;
-    margin-bottom: -50px;
-    overflow: hidden;
-}
-
-/* === Resources Section === */
-.resources-grid {
-display: grid;
-grid-template-columns: repeat(2, 1fr);
-gap: 30px;
-padding-bottom: 2rem;
-}
-
-.resource-card {
-background-color: white;
-border-radius: 10px;
-overflow: hidden;
-box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
-transition: transform 0.3s ease;
-display: flex;
-flex-direction: column;
-}
-
-.resource-card:hover {
-transform: translateY(-10px);
-}
-
-.resource-image {
-height: 150px;
-background-color: #ddd;
-position: relative;
-overflow: hidden;
-}
-
-.resource-image img {
-width: 100%;
-height: 100%;
-object-fit: cover;  /* ensures the image fits perfectly in the box */
-display: block;
-}
-
-.resource-content {
-padding: 25px;
-display: flex;
-flex-direction: column;
-justify-content: center;
-}
-
-.resource-tag {
-display: inline-table;
-background-color: rgba(156, 82, 131, 0.2);
-color: #9c5283;
-border-radius: 20px;
-font-size: 15px;
-margin-bottom: 15px;
-width: 6rem;
-text-align: center;
-font-weight: 700;
-}
-
-.resource-card h3 {
-margin-bottom: 10px;
-}
-
-.resource-card p {
-margin-bottom: 20px;
-width:100%;
-
-}
-
-.resource-link {
-color: #9c5283;
-text-decoration: none;
-font-weight: 500;
-display: flex;
-align-items: center;
-}
-
-.resource-link i {
-margin-left: 5px;
-transition: transform 0.3s ease;
-}
-
-.resource-link:hover i {
-transform: translateX(5px);
-}
-
-@media (min-width: 1440px) {
-  .resources-grid {
-    grid-template-columns: repeat(2, 1fr); /* allow more columns */
-  }
-}
-
-
-
-
-/* === Footer === */
-footer {
-    background-color: #333;
-    color: white;
-    padding: 40px 0 20px;
-    text-align: center;
-    margin-bottom: -80px;
-    
-}
-
-
-
-
-/* === Responsive Styles === */
-@media (max-width: 992px) {
-  *{
-    overflow-x: hidden;
-  }
-    h1 {
-        font-size: 2.4rem;
-    }
-
-    h2 {
-        font-size: 1.8rem;
-    }
-
-    .hero-container,
-    .about-container {
-        flex-direction: column;
-    }
-
-    .hero-content,
-    .about-content {
-        padding-right: 0;
-        margin-bottom: 40px;
-        text-align: center;
-    }
-
-    .hero p {
-        margin: 0 auto 30px;
-    }
-
-    .features-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .footer-top {
-        grid-template-columns: 1fr 1fr;
-        gap: 40px;
-    }
-}
-
-@media (max-width: 768px) {
-   .resources{
-    margin-top: -3rem;
-   }
-    nav ul {
-        display: none;
-    }
-    .resource-tag{
-      width: 24vw;
-    }
-    .mobile-toggle {
-        display: block;
-    }
-    .resources h2{
-      font-size:1.3rem;
-      margin-top: 1rem;
-    }
-
-    .features-grid,
-    .resources-grid {
-        grid-template-columns: 1fr;
-    }
-    .resource-card p {
-margin-bottom: 20px;
-width:80vw
-}
-
-    .newsletter-form {
-        flex-direction: column;
-    }
-
-    .newsletter-input {
-        border-radius: 30px;
-        margin-bottom: 15px;
-    }
-
-    .newsletter-btn {
-        border-radius: 30px;
-        padding: 15px 30px;
-        width: 100%;
-    }
-
-    .footer-top {
-        grid-template-columns: 1fr;
-    }
-}
-
-
-/* section 2 */
-.perimenopause-section {
-    background: linear-gradient(135deg, #ffe6e6, #fff6f9);
-    padding: 5rem 2rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-  }
-  
-  .text-wrapper {
-    max-width: 800px;
-  }
-  
-  .perimenopause-section h1 {
-    font-size: 2rem;
-    color: #b83250;
-    font-weight: bold;
-    margin-bottom: 1rem;
-  }
-  
-  .perimenopause-section h2 {
-    font-size: 1.6rem;
-    color: #d64575;
-    margin-bottom: 1rem;
-  }
-  
-  .perimenopause-section p {
-    font-size: 1.2rem;
-    color: #4f4f4f;
-    margin-bottom: 0.5rem;
-  }
-  
-  .final-line {
-    font-weight: bold;
-    font-size: 1.3rem;
-    color: #8a2458;
-  }
 
   /* left shit secction */
   .life-shift-section {
@@ -1864,7 +1347,7 @@ width:80vw
   .life-shift-section p {
     font-size: 1.3rem;
     color: #333;
-    line-height: 1.6;
+    line-height: 1.5;
     margin-bottom: 1rem;
   }
   
@@ -2002,7 +1485,7 @@ width:80vw
 
 .turning-point-list li {
   font-size: 1.15rem;
-  line-height: 1.7;
+  line-height: 1.5 !important;
   margin-bottom: 1.2rem;
   padding-left: 1.6rem;
   position: relative;
@@ -2024,74 +1507,15 @@ width:80vw
 }
 
 .turning-point-image img {
-  width: 100%;
+  width: 95%;
   height: auto;
   border-radius: 10px;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  margin-left: 2rem;
 }
 
 
-/* === MacBook Pro / Large Screen Fixes === */
-@media screen and (min-width: 1440px) and (max-width: 1680px) {
-  .turning-point-section {
-    padding: 5rem 4rem;
-  }
 
-  .turning-point-container {
-    gap: 4rem;
-    flex-wrap: nowrap; /* Force side-by-side */
-  }
-
-  .turning-point-content {
-    flex: 1 1 55%;
-  }
-
-  .turning-point-content h2 {
-    font-size: 2.4rem;
-  }
-
-  .turning-point-content h3 {
-    font-size: 2rem;
-  }
-
-  .turning-point-list li {
-    font-size: 1.2rem;
-  }
-
-  .turning-point-image {
-    flex: 1 1 45%;
-    max-width: 480px;
-  }
-}
-
-/* === Ultra-Wide Screens (1920px and above) === */
-@media screen and (min-width: 1920px) {
-  .turning-point-section {
-    padding: 6rem 6rem;
-  }
-
-  .turning-point-container {
-    gap: 5rem;
-    flex-wrap: nowrap; /* Keep side-by-side */
-  }
-
-  .turning-point-content h2 {
-    font-size: 2.6rem;
-  }
-
-  .turning-point-content h3 {
-    font-size: 2.2rem;
-  }
-
-  .turning-point-list li {
-    font-size: 1.25rem;
-  }
-
-  .turning-point-image {
-    flex: 1 1 45%;
-    max-width: 520px;
-  }
-}
 
 /*  Mobile & Tablet Styles
 ======================== */
@@ -2218,7 +1642,7 @@ width:80vw
   
   .coaching-invite-wrapper {
     max-width: 780px;
-    color: #383838;
+    color: #282828;
     text-align: center;
     overflow:hidden
   }
@@ -2232,9 +1656,10 @@ width:80vw
   }
   
   .coaching-invite-wrapper p {
-    font-size: 1.2rem;
-    line-height: 1.1;
+    font-size: 1.3rem !important;
+    line-height: 1.4;
     margin-bottom: 1.2rem;
+    color:#050405
   }
   
   .coaching-invite-wrapper strong {
@@ -2282,44 +1707,6 @@ width:80vw
     margin-left:1rem
   }
   
-  /* MEDIA QUERIES */
-  @media screen and (min-width: 1440px) {
-  .coaching-invite-section {
-    padding: 5rem 4rem;
-    margin-top: -1rem;
-  }
-
-  .coaching-invite-wrapper {
-    max-width: 1000px;
-    margin: 0 auto;
-  }
-
-  .coaching-invite-wrapper h2 {
-    font-size: 2.8rem;
-    margin-bottom: 2.2rem;
-  }
-
-  .coaching-invite-wrapper p {
-    font-size: 1.4rem;
-    line-height: 1.6;
-    margin-bottom: 1.5rem;
-  }
-
-  .cta-box {
-    padding: 2.2rem;
-    border-radius: 16px;
-  }
-
-  .cta-button {
-    padding: 1.1rem 1.5rem;
-    font-size: 1.1rem;
-  }
-
-  .cta-subtext {
-    font-size: 1.1rem;
-    margin-left: 1rem;
-  }
-}
 
   @media (max-width: 1080px) {
     .coaching-invite-section {
@@ -2404,7 +1791,7 @@ width:80vw
   
   .program-content {
     flex: 1 1 500px;
-    max-width: 900px;
+    max-width: 1200px;
   }
   
   .program-content h2 {
@@ -2461,86 +1848,7 @@ width:80vw
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   }
 
-  /* === MacBook Pro / Large Screen Fixes === */
-@media screen and (min-width: 1440px) and (max-width: 1680px) {
-  .program-section {
-    padding: 80px 60px;
-    gap: 60px;
-    flex-wrap: nowrap; /* Force side-by-side layout */
-  }
-
-  .program-content {
-    flex: 1 1 55%;
-    max-width: none;
-  }
-
-  .program-content h2 {
-    font-size: 2rem !important;
-  }
-
-  .program-content h2 span {
-    font-size: 2.2rem !important;
-  }
-
-  .program-content p {
-    font-size: 1.2rem;
-  }
-
-  .program-button {
-    font-size: 1.15rem;
-    padding: 1rem 1.4rem;
-  }
-
-  .program-image {
-    flex: 1 1 45%;
-    max-width: 480px;
-  }
-
-  .program-image img {
-    width: 100%;
-  }
-}
-
-
-/* === Ultra-Wide Screens (1920px and above) === */
-@media screen and (min-width: 1920px) {
-  .program-section {
-    padding: 100px 100px;
-    gap: 80px;
-    flex-wrap: nowrap; /* Maintain side-by-side layout */
-  }
-
-  .program-content {
-    flex: 1 1 55%;
-    max-width: none;
-  }
-
-  .program-content h2 {
-    font-size: 2.3rem !important;
-  }
-
-  .program-content h2 span {
-    font-size: 2.5rem !important;
-  }
-
-  .program-content p {
-    font-size: 1.25rem;
-  }
-
-  .program-button {
-    font-size: 1.2rem;
-    padding: 1.1rem 1.6rem;
-  }
-
-  .program-image {
-    flex: 1 1 45%;
-    max-width: 520px;
-  }
-
-  .program-image img {
-    width: 100%;
-  }
-}
+ 
 
 /* for xl screens */
 @media screen and (min-width: 1440px) {
@@ -2551,7 +1859,7 @@ width:80vw
     justify-content: center;
     gap: 80px; /* increased gap for better spacing */
     padding: 100px 80px; /* added more breathing room */
-    max-width: 1200px;
+    max-width: 1280px;
     margin: 0 auto;
     box-sizing: border-box;
   }
@@ -2815,95 +2123,7 @@ width:80vw
     transform: scale(1.05);
   }
   
-  /* === MacBook Pro / Large Screen Fixes === */
-@media screen and (min-width: 1440px) and (max-width: 1680px) {
-  .transform-journey {
-    padding: 4rem 60px !important;
-    border-radius: 40px;
-  }
-
-  .transform-journey .heading h2,
-  .transform-journey .heading h3 {
-    font-size: 2.1rem;
-  }
-
-  .transform-journey .heading p {
-    font-size: 1.2rem;
-    max-width: 850px;
-    margin: 0 auto;
-  }
-
-  .transform-benefits {
-    gap: 50px 40px;
-  }
-
-  .benefit {
-    padding: 15px;
-  }
-
-  .benefit-icon {
-    font-size: 1.8rem;
-  }
-
-  .benefit-content h4 {
-    font-size: 1.2rem;
-  }
-
-  .benefit-content p {
-    font-size: 1.05rem;
-  }
-
-  .cta-button {
-    font-size: 1.15rem;
-    padding: 16px 40px;
-  }
-}
-
-
-/* === Ultra-Wide Screens (1920px and above) === */
-@media screen and (min-width: 1920px) {
-  .transform-journey {
-    padding: 5rem 100px !important;
-    border-radius: 50px;
-  }
-
-  .transform-journey .heading h2,
-  .transform-journey .heading h3 {
-    font-size: 2.4rem;
-  }
-
-  .transform-journey .heading p {
-    font-size: 1.25rem;
-    max-width: 900px;
-    margin: 0 auto;
-  }
-
-  .transform-benefits {
-    max-width: 1100px;
-    gap: 60px 50px;
-  }
-
-  .benefit {
-    padding: 20px;
-  }
-
-  .benefit-icon {
-    font-size: 2rem;
-  }
-
-  .benefit-content h4 {
-    font-size: 1.3rem;
-  }
-
-  .benefit-content p {
-    font-size: 1.1rem;
-  }
-
-  .cta-button {
-    font-size: 1.25rem;
-    padding: 18px 48px;
-  }
-}
+ 
 
   /* media queries */
   @media screen and (min-width: 1440px) {
