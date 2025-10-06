@@ -1221,6 +1221,14 @@ animation: scroll 2s ease-in-out infinite;
 }
 
 
+@media (min-width: 1900px) {
+  .about-content h1{
+    font-size: 1.6rem !important;
+  }
+  .about-content .cta-text{
+    font-size: 1.2rem !important;
+  }
+}
 /* For screens up to 1080px */
 @media (max-width: 1080px) {
   .about-container {
@@ -1303,7 +1311,7 @@ animation: scroll 2s ease-in-out infinite;
   }
   .about .cta-subtext{
     text-align:center;
-    font-weight:400;
+    font-weight:500;
   }
   
 }
@@ -1468,7 +1476,7 @@ animation: scroll 2s ease-in-out infinite;
   font-size: 2.1rem !important;
   color: #9c5283;
   margin-bottom: 1rem;
-  font-style: italic;
+  font-style:normal;
   text-align: left;
 }
 
@@ -1879,9 +1887,9 @@ animation: scroll 2s ease-in-out infinite;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap: 80px; /* increased gap for better spacing */
+    gap: 100px; /* increased gap for better spacing */
     padding: 100px 80px; /* added more breathing room */
-    max-width: 1280px;
+    max-width: 1380px;
     margin: 0 auto;
     box-sizing: border-box;
   }
@@ -1893,12 +1901,12 @@ animation: scroll 2s ease-in-out infinite;
   }
 
   .program-content h2 {
-    font-size: 2.2rem;
+    font-size: 1.8rem;
     margin-bottom: 24px;
   }
 
   .program-content h2 span {
-    font-size: 2.2rem;
+    font-size: 1.8rem;
   }
 
   .program-content p {
@@ -2207,6 +2215,10 @@ animation: scroll 2s ease-in-out infinite;
     font-size: 1.2rem;
     padding: 16px 48px;
     border-radius: 10px;
+  }
+  .transform-journey .cta-text{
+    font-weight: 500 !important;
+    padding-top: 15px;
   }
 }
 
@@ -3020,7 +3032,7 @@ animation: scroll 2s ease-in-out infinite;
   margin-top: 25px;
   color: #333;
   font-size: 1.2rem;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .awakening-beautiful {
@@ -3136,6 +3148,10 @@ animation: scroll 2s ease-in-out infinite;
 
   .awakening-card h3 {
     font-size: 1.8rem;
+  }
+  .awakening-card p{
+    font-size: 1.6rem;
+    font-style: normal !important;
   }
 }
 
@@ -3359,6 +3375,12 @@ animation: scroll 2s ease-in-out infinite;
     padding: 10px 20px;
     font-size: 0.9rem;
   }
+}
+
+/* footer */
+.footer-bottom{
+  text-align: left;
+  font-size: 0.8rem;
 }
 
 /* <!---Break through --> */
