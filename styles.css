@@ -569,7 +569,7 @@ animation: scroll 2s ease-in-out infinite;
    ================================ */
 @media screen and (max-width: 480px) {
   .hero {
-    overflow: hidden !important;
+    /* overflow: hidden !important; */
     padding-bottom: 2rem;
     overflow-y: auto;
   
