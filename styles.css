@@ -85,6 +85,7 @@ img {
     box-shadow: 0 4px 15px rgba(156, 82, 131, 0.2);
      border-radius: 10px;
      font-weight: 600;
+     font-size: 1rem;
 }
 
 .btn-primary:hover {
@@ -234,7 +235,7 @@ header {
 .hero-content {
     flex: 1;
     padding-top: 6rem;
-    color: #4A4A4A;  /* Deep Charcoal Gray for text */
+     
     overflow:hidden;
     margin-left: 7em !important;
     
@@ -392,7 +393,9 @@ animation: scroll 2s ease-in-out infinite;
 
 @media (min-width:1900px){
   .hero-container{
-    max-width:1600px;
+     width: 90%;      /* container takes 90% of screen width */
+  max-width: 2200px; /* optional limit for very large screens */
+  margin: 0 auto;
   }
 }
 
@@ -1223,7 +1226,8 @@ animation: scroll 2s ease-in-out infinite;
     border: 1px solid red;
 }
 .about-content p{
-    font-size: 1.1rem;
+    font-size: 1.2rem;
+    color: #000000 !important;
   
 }
 
@@ -1479,7 +1483,7 @@ animation: scroll 2s ease-in-out infinite;
 /* Text Content */
 .turning-point-content {
   flex: 1 1 50%;
-  color: #3d3d3d;
+  color: #000000;
 }
 
 .turning-point-content h2 {
@@ -1505,6 +1509,7 @@ animation: scroll 2s ease-in-out infinite;
 
 .turning-point-list li {
   font-size: 1.15rem;
+  color: black;
   line-height: 1.5 !important;
   margin-bottom: 1.2rem;
   padding-left: 1.6rem;
@@ -1848,7 +1853,7 @@ animation: scroll 2s ease-in-out infinite;
   
   .program-content p {
     font-size: 1.2rem;
-    color: #333;
+    color: #000000;
     margin-bottom: 15px;
     text-align: left;
   }
@@ -2088,7 +2093,7 @@ animation: scroll 2s ease-in-out infinite;
   .transform-journey .heading p {
     font-size: 1.15rem;
     line-height: 1.5;
-    color: #4a4a4a;
+    color: #000000;
   }
   .transform-journey .ebook-btn{
     text-align:center;
@@ -2673,7 +2678,7 @@ animation: scroll 2s ease-in-out infinite;
 .step-item p {
   font-size: 1.1rem;
   line-height: 1.6;
-  color: #4d3a44;
+  color: #000000;
 }
 
 @keyframes fadeInUp {
@@ -2955,7 +2960,7 @@ animation: scroll 2s ease-in-out infinite;
 
 .awakening-subtext {
   font-size: 1.2rem;
-  color: #444;
+  color: #030303;
   margin-bottom: 25px;
 }
 
@@ -2968,7 +2973,7 @@ animation: scroll 2s ease-in-out infinite;
 
 .awakening-desc {
   font-size: 1.1rem;
-  color: #555;
+  color: #000000;
   margin-bottom: 30px;
 }
 
@@ -2990,21 +2995,17 @@ animation: scroll 2s ease-in-out infinite;
 
 .awakening-list li {
   font-size: 1.1rem;
-  color: #333;
+  color: #000000;
   margin-bottom: 10px;
   display: flex;
   align-items: center;
 }
 
-.awakening-list li::before {
-  /* content: "✨"; */
-  margin-right: 8px;
-  color: #ff8c42;
-}
+
 
 .awakening-quote {
   font-size: 1.2rem;
-  font-style: italic;
+  font-style: normal;
   color: #9c5283;
   margin: 30px 0;
 }
@@ -3018,7 +3019,7 @@ animation: scroll 2s ease-in-out infinite;
 .awakening-cta-title {
   font-size: 1.5rem;
   color: #9c5283;
-  font-weight: 700;
+  font-weight: 600;
   margin-bottom: 20px;
 }
 
@@ -3041,7 +3042,7 @@ animation: scroll 2s ease-in-out infinite;
 
 .awakening-footer {
   margin-top: 25px;
-  color: #333;
+  color: #000000;
   font-size: 1.2rem;
   font-weight: 500;
 }
@@ -3292,26 +3293,27 @@ animation: scroll 2s ease-in-out infinite;
 .checklist ul li {
   margin-bottom: 16px;
   font-size: 1.2rem;
+  line-height: 1.7;
   padding-left: 28px;
   position: relative;
-  color: #262525;
+  color: #000000;
 }
-.checklist ul li::before {
+/* .checklist ul li::before {
   content: "✔";
   position: absolute;
   left: 0;
   top: 0;
   color: #d63384;
   font-weight: bold;
-}
+} */
 
 /* dream style */
 .vision p {
   font-size: 1.2rem;
   margin-bottom: 14px;
   line-height: 1.7;
-  font-style: italic;
-  color: #333;
+  font-style: normal;
+  color: #000000;
 }
 .vision .highlight {
   font-weight: bold;
@@ -3421,14 +3423,14 @@ animation: scroll 2s ease-in-out infinite;
 
 .hero-intro .tagline {
   font-size: 1.2rem;
-  color: #444;
+  color: #000000;
   margin-bottom: 15px;
   line-height: 1.6;
 }
 
 .hero-intro .description {
   font-size: 1.2rem;
-  color: #555;
+  color: #000000;
   line-height: 1.7;
   max-width: 750px;
   margin: 0 auto;
