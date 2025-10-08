@@ -84,6 +84,7 @@ img {
     color: white;
     box-shadow: 0 4px 15px rgba(156, 82, 131, 0.2);
      border-radius: 10px;
+     font-weight: 600;
 }
 
 .btn-primary:hover {
@@ -389,6 +390,11 @@ animation: scroll 2s ease-in-out infinite;
 }
 
 
+@media (min-width:1900px){
+  .hero-container{
+    max-width:1600px;
+  }
+}
 
 /* media queries */
 @media (max-width: 1080px) {
